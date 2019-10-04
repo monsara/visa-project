@@ -1,0 +1,454 @@
+/*
+ * Author: Viktor Hirenko
+ *
+ * Project Name: Visa
+ * Version: 1.0
+ * Date: 04-10-2019
+ */
+
+:root {
+  --color__grey--dark: #222222;
+  --color__grey--darker: #0f0f10;
+  --color__white: #ffffff;
+
+  --font__family--base: "Roboto", sans-serif;
+  --color-text: var(--color__grey--darker);
+}
+
+/* ==========================================================================
+   Base Styles
+   ========================================================================== */
+
+html {
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* ==========================================================================
+   Helpers Styles
+   ========================================================================== */
+
+/* visually-hidden helper */
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Base Styles
+   ========================================================================== */
+
+.container {
+  width: 375px;
+  padding: 0 18px;
+  margin: 0 auto;
+}
+
+.img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* Link */
+.link {
+  text-decoration: none;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+/* ==========================================================================
+   Layout Styles
+   ========================================================================== */
+
+/* Page begin */
+.page {
+  position: relative;
+
+  min-width: 375px;
+  min-height: 100%;
+
+  font-family: var(--font__family--base);
+  color: var(--color-text);
+
+  background-color: var(--color__white);
+}
+
+.page__header {
+  width: 335px;
+  min-height: 29px;
+
+  position: absolute;
+  top: 20px;
+  left: 50%;
+}
+
+.page__head {
+  height: 630px;
+  margin-bottom: 37px;
+}
+/* Page end */
+
+/* Header begin */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  z-index: 1;
+
+  transform: translateX(-50%);
+}
+
+.header__logo {
+  height: 29px;
+}
+
+.header__line {
+  display: none;
+}
+/* Header end */
+
+/* Logo begin */
+.logo__list {
+  font-size: 0;
+}
+
+.logo__item {
+  display: inline-block;
+}
+
+.logo__item:nth-child(2) {
+  transform: translateX(-12px);
+}
+
+.logo__circle {
+  width: 29px;
+  height: 29px;
+
+  opacity: 0.64;
+  border-radius: 32px;
+
+  background: #ffffff;
+}
+/* Logo end */
+
+/* Nav begin */
+.nav__hamburger {
+  cursor: pointer;
+}
+
+.nav__link {
+  display: none;
+}
+/* Nav end */
+
+/* Hamburger begin */
+.hamburger__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+
+  width: 20px;
+  height: 14px;
+}
+
+.hamburger__block {
+  width: 20px;
+  height: 2px;
+
+  border: none;
+  border-radius: 4px;
+
+  background-color: #fff;
+}
+/* Hamburger end */
+
+/* Head begin */
+.head {
+  text-align: center;
+
+  background-image: url(../img/banner-bg-img-mobile.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.head__title {
+  margin: 0;
+  margin-bottom: 16px;
+  padding-top: 109px;
+
+  font-size: 26px;
+  line-height: 100%;
+  font-weight: 300;
+
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.head__text {
+  margin: 0;
+  margin-bottom: 39px;
+
+  font-size: 47px;
+  font-weight: 500;
+  line-height: 120%;
+
+  color: var(--color__white);
+}
+/* Head end */
+
+/* Planning begin */
+.plannig {
+  background-image: url(../img/planinng-trips-bg-img-mobile.jpg);
+  background-repeat: no-repeat;
+}
+
+.plannig__title {
+  margin: 0;
+  margin-bottom: 16px;
+  padding-top: 69px;
+  padding-left: 6px;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 120%;
+
+  color: var(--color__white);
+}
+
+.plannig__text {
+  margin: 0;
+  margin-bottom: 40px;
+  padding-left: 6px;
+
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 140%;
+
+  color: var(--color__white);
+}
+
+.plannig__item {
+  position: relative;
+
+  width: 340px;
+  margin-bottom: 30px;
+
+  border-radius: 12px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+
+  background: #ffffff;
+}
+
+.plannig__item_hovered {
+  cursor: pointer;
+}
+
+.plannig__item:last-child {
+  margin-bottom: 50px;
+}
+
+.plannig__item::before {
+  position: absolute;
+
+  content: "";
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.plannig__item-luxury-hotel {
+  height: 304px;
+}
+
+.plannig__item-luxury-hotel::before {
+  top: 20px;
+  left: 16px;
+
+  width: 55px;
+  height: 60px;
+
+  background-image: url(../img/vlchc-icon-img.png);
+}
+
+.plannig__item-luxury-hotel .plannig__item-title {
+  padding-top: 92px;
+}
+
+.plannig__item-car-rental {
+  height: 353px;
+
+  background: linear-gradient(180deg, #7a9fff 0%, #57d5f0 100%);
+}
+
+.plannig__item-car-rental::before {
+  top: -27px;
+  left: -3px;
+
+  width: 204px;
+  height: 204px;
+
+  background-image: url(../img/car-img.png);
+}
+
+.plannig__item-car-rental .plannig__item-title,
+.plannig__travel-insurance .plannig__item-title {
+  padding-top: 141px;
+}
+
+.plannig__item-car-rental .plannig__item-link::after,
+.plannig__travel-insurance .plannig__item-link::after {
+  background-image: url(../img/arrow-pointer-dark-icon-img.svg);
+}
+
+.plannig__item-concierge-service {
+  height: 308px;
+}
+
+.plannig__item-concierge-service::before,
+.plannig__item-safe-rental::before,
+.plannig__item-personal-manager::before,
+.plannig__item-agoda::before {
+  top: 30px;
+  left: 19px;
+
+  width: 48px;
+  height: 48px;
+}
+
+.plannig__item-concierge-service::before,
+.plannig__item-safe-rental::before {
+  background-image: url(../img/visa-icon-img.png);
+}
+
+.plannig__item-concierge-service .plannig__item-title,
+.plannig__item-safe-rental .plannig__item-title,
+.plannig__item-personal-manager .plannig__item-title,
+.plannig__item-agoda .plannig__item-title {
+  padding-top: 96px;
+}
+
+.plannig__item-safe-rental,
+.plannig__item-agoda {
+  height: 270px;
+}
+
+.plannig__item-personal-manager {
+  height: 400px;
+}
+
+.plannig__item-personal-manager::before {
+  background-image: url(../img/triangle-icon-img.png);
+}
+
+.plannig__item-agoda::before {
+  background-image: url(../img/rent-hotel-icon-img.png);
+}
+
+.plannig__travel-insurance {
+  height: 325px;
+
+  background: linear-gradient(180deg, #ffdf6b 0%, #ffd43c 100%);
+}
+
+.plannig__travel-insurance::before {
+  top: 5px;
+  left: -9px;
+
+  width: 122px;
+  height: 122px;
+
+  background-image: url(../img/suitcase-img.png);
+}
+
+/* ----------------------- */
+.plannig__item-container {
+  padding: 0 24px;
+}
+
+.plannig__item-title {
+  margin: 0;
+  margin-bottom: 16px;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: -0.050568px;
+
+  color: var(--color__grey--dark);
+}
+
+.plannig__item-text {
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 144%;
+  letter-spacing: -0.050568px;
+
+  color: var(--color__grey--darker);
+}
+
+.plannig__item-car-rental-text_view_desktop {
+  display: none;
+}
+
+.plannig__item-link {
+  font-family: Roboto;
+  font-size: 15px;
+  line-height: 120%;
+  font-weight: 300;
+
+  color: var(--color__grey--darker);
+}
+
+.plannig__item-link::after {
+  display: inline-block;
+
+  width: 6px;
+  height: 8px;
+  margin-left: 7px;
+
+  content: "";
+
+  background-image: url(../img/arrow-pointer-icon-img.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.plannig__item-link_color_blue {
+  color: #4672e1;
+}
+/* Planning end */

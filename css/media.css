@@ -1,0 +1,288 @@
+@media (min-width: 1366px) {
+  .container {
+    width: 1070px;
+    padding: 0 89px;
+    margin: 0 auto;
+  }
+
+  /* Header begin */
+  .header {
+    flex-wrap: wrap;
+
+    width: 1366px;
+    padding: 0 235px;
+
+    top: 27px;
+  }
+
+  .headhesive {
+    display: flex;
+
+    align-items: center;
+    min-height: 82px;
+
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -87px);
+
+    background: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+    transition: 0.5s;
+  }
+
+  .headhesive--stick {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  .headhesive--stick .logo__circle,
+  .headhesive--stick .hamburger__block,
+  .headhesive--stick .nav__link {
+    background: #000000;
+    color: #ffffff;
+  }
+
+  .headhesive--stick .hamburger__block {
+    background: #000000;
+  }
+
+  .header__line {
+    display: block;
+
+    position: absolute;
+    top: 56px;
+
+    width: 896px;
+    height: 1px;
+
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+  /* Header end */
+
+  /* Nav begin */
+  .nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav__logo {
+    margin-right: 550px;
+  }
+
+  .nav__hamburger {
+    margin-right: 24px;
+  }
+
+  .nav__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 137px;
+    height: 33px;
+
+    left: 994px;
+    top: 25px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+
+    letter-spacing: -0.5px;
+
+    color: #066eb0;
+
+    background: var(--color__white);
+    border-radius: 24px;
+  }
+  /* Nav begin */
+
+  /* Head begin */
+  .head {
+    max-width: 1366px;
+    height: 757px;
+    margin: 0 auto;
+    margin-bottom: 110px;
+
+    background-image: url(../img/banner-bg-img-desktop.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+
+  .head__content {
+    position: relative;
+
+    width: 651px;
+    margin: 0 auto;
+  }
+
+  .head__title {
+    margin-bottom: 4px;
+    padding-top: 171px;
+
+    font-size: 35px;
+  }
+
+  .head__text {
+    margin-bottom: 15px;
+
+    font-size: 64px;
+    line-height: 131%;
+  }
+
+  .head__shadow {
+    position: absolute;
+    top: 385px;
+    left: 50%;
+    transform: translatex(-50%);
+
+    width: 510px;
+    height: 322px;
+
+    background: rgba(154, 158, 188, 0.332);
+    filter: blur(111px);
+    border-radius: 20px;
+  }
+  /* Head begin */
+
+  /* Planning begin */
+  .plannig {
+    height: 1350px;
+    margin-bottom: 329px;
+
+    background-image: url(../img/planinng-trips-bg-img-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .plannig__title {
+    margin-bottom: 8px;
+    padding-top: 64px;
+
+    font-size: 54px;
+  }
+
+  .plannig__text {
+    margin-bottom: 56px;
+  }
+
+  .plannig__title,
+  .plannig__text {
+    line-height: 126.84%;
+  }
+
+  .plannig__list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  .plannig__item {
+    width: 276px;
+    margin-bottom: 32px;
+    transition: all 0.2s linear;
+
+    box-shadow: 0px 4px 50px rgba(5, 44, 71, 0.2);
+  }
+
+  .plannig__item_hovered:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 4px 50px rgba(5, 44, 71, 0.4);
+  }
+
+  .plannig__item_hovered:hover .plannig__item-link::after {
+    margin-left: 8px;
+  }
+
+  .plannig__item-luxury-hotel {
+    height: 291px;
+  }
+
+  .plannig__item-luxury-hotel .plannig__item-title {
+    padding-top: 90px;
+  }
+
+  .plannig__item-luxury-hotel .plannig__item-text {
+    margin-bottom: 24px;
+  }
+
+  .plannig__item-car-rental {
+    height: 303px;
+    margin-top: 49px;
+  }
+
+  .plannig__item-car-rental .plannig__item-title,
+  .plannig__travel-insurance .plannig__item-title {
+    padding-top: 129px;
+    font-size: 24px;
+    line-height: 136.5%;
+  }
+
+  .plannig__item-car-rental-text_view_mobile {
+    display: none;
+  }
+
+  .plannig__item-car-rental-text_view_desktop {
+    display: block;
+  }
+
+  .plannig__item-concierge-service {
+    height: 277px;
+    margin-top: 230px;
+  }
+
+  .plannig__item-concierge-service .plannig__item-title,
+  .plannig__item-safe-rental .plannig__item-title,
+  .plannig__item-personal-manager .plannig__item-title,
+  .plannig__item-agoda .plannig__item-title {
+    padding-top: 92px;
+  }
+
+  .plannig__item-safe-rental {
+    height: 236px;
+    margin-top: -215px;
+  }
+
+  .plannig__item-personal-manager,
+  .plannig__travel-insurance {
+    height: 360px;
+    margin-top: -150px;
+  }
+
+  .plannig__item-agoda {
+    height: 260px;
+  }
+
+  .plannig__travel-insurance {
+    margin-top: -237px;
+  }
+
+  .plannig__travel-insurance .plannig__item-text {
+    margin-bottom: 40px;
+  }
+
+  .plannig__item-title {
+    margin-bottom: 8px;
+  }
+
+  .plannig__item-text {
+    margin: 0;
+    margin-bottom: 32px;
+
+    font-size: 14px;
+  }
+
+  .plannig__item-link {
+    font-size: 14px;
+  }
+
+  .plannig__item-link::after {
+    transition: margin-left 0.2s linear;
+  }
+  /* Planning end */
+}
