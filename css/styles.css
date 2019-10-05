@@ -198,6 +198,10 @@ input[type="radio"].visually-hidden {
   background-position: bottom;
 }
 
+.head__content {
+  padding: 0;
+}
+
 .head__title {
   margin: 0;
   margin-bottom: 16px;
