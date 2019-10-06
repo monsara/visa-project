@@ -2,11 +2,12 @@
  * Author: Viktor Hirenko
  *
  * Project Name: Visa
- * Version: 1.0
- * Date: 04-10-2019
+ * Version: 2.0
+ * Date: 06-10-2019
  */
 
 :root {
+  --color__black: #000000;
   --color__grey--dark: #222222;
   --color__grey--darker: #0f0f10;
   --color__white: #ffffff;
@@ -72,6 +73,7 @@ input[type="radio"].visually-hidden {
 .list {
   margin: 0;
   padding: 0;
+
   list-style-type: none;
 }
 
@@ -100,12 +102,12 @@ input[type="radio"].visually-hidden {
 }
 
 .page__header {
-  width: 335px;
-  min-height: 29px;
-
   position: absolute;
   top: 20px;
   left: 50%;
+
+  width: 335px;
+  min-height: 29px;
 }
 
 .page__head {
@@ -116,13 +118,12 @@ input[type="radio"].visually-hidden {
 
 /* Header begin */
 .header {
+  z-index: 1;
+  transform: translateX(-50%);
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  z-index: 1;
-
-  transform: translateX(-50%);
 }
 
 .header__logo {
@@ -151,10 +152,10 @@ input[type="radio"].visually-hidden {
   width: 29px;
   height: 29px;
 
-  opacity: 0.64;
+  background: var(--color__white);
   border-radius: 32px;
 
-  background: #ffffff;
+  opacity: 0.64;
 }
 /* Logo end */
 
@@ -182,10 +183,9 @@ input[type="radio"].visually-hidden {
   width: 20px;
   height: 2px;
 
+  background-color: #fff;
   border: none;
   border-radius: 4px;
-
-  background-color: #fff;
 }
 /* Hamburger end */
 
@@ -196,6 +196,10 @@ input[type="radio"].visually-hidden {
   background-image: url(../img/banner-bg-img-mobile.png);
   background-repeat: no-repeat;
   background-position: bottom;
+}
+
+.head__video-container {
+  display: none;
 }
 
 .head__content {
@@ -210,7 +214,6 @@ input[type="radio"].visually-hidden {
   font-size: 26px;
   line-height: 100%;
   font-weight: 300;
-
   color: rgba(255, 255, 255, 0.8);
 }
 
@@ -221,15 +224,18 @@ input[type="radio"].visually-hidden {
   font-size: 47px;
   font-weight: 500;
   line-height: 120%;
-
   color: var(--color__white);
 }
 /* Head end */
 
 /* Planning begin */
 .plannig {
+  height: 375px;
+
   background-image: url(../img/planinng-trips-bg-img-mobile.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .plannig__title {
@@ -242,7 +248,6 @@ input[type="radio"].visually-hidden {
   font-weight: bold;
   font-size: 32px;
   line-height: 120%;
-
   color: var(--color__white);
 }
 
@@ -255,7 +260,6 @@ input[type="radio"].visually-hidden {
   font-weight: 300;
   font-size: 20px;
   line-height: 140%;
-
   color: var(--color__white);
 }
 
@@ -265,10 +269,9 @@ input[type="radio"].visually-hidden {
   width: 340px;
   margin-bottom: 30px;
 
+  background: #ffffff;
   border-radius: 12px;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-
-  background: #ffffff;
 }
 
 .plannig__item_hovered {
@@ -309,7 +312,6 @@ input[type="radio"].visually-hidden {
 
 .plannig__item-car-rental {
   height: 353px;
-
   background: linear-gradient(180deg, #7a9fff 0%, #57d5f0 100%);
 }
 
@@ -393,7 +395,6 @@ input[type="radio"].visually-hidden {
   background-image: url(../img/suitcase-img.png);
 }
 
-/* ----------------------- */
 .plannig__item-container {
   padding: 0 24px;
 }
@@ -407,7 +408,6 @@ input[type="radio"].visually-hidden {
   font-size: 20px;
   line-height: 120%;
   letter-spacing: -0.050568px;
-
   color: var(--color__grey--dark);
 }
 
@@ -420,7 +420,6 @@ input[type="radio"].visually-hidden {
   font-size: 18px;
   line-height: 144%;
   letter-spacing: -0.050568px;
-
   color: var(--color__grey--darker);
 }
 
@@ -433,7 +432,6 @@ input[type="radio"].visually-hidden {
   font-size: 15px;
   line-height: 120%;
   font-weight: 300;
-
   color: var(--color__grey--darker);
 }
 
