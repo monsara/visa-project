@@ -11,13 +11,18 @@
     padding: 0 89px;
   }
 
-  /* Header begin */
-  .header {
+  /* Page begin */
+  .page__header {
     top: 27px;
-
-    flex-wrap: wrap;
     width: 100%;
     padding: 0 235px;
+  }
+
+  /* Page end */
+
+  /* Header begin */
+  .header {
+    flex-wrap: wrap;
   }
 
   .headhesive {
@@ -41,6 +46,7 @@
     top: 0;
     left: 50%;
     transform: translate(-50%, 0);
+    z-index: 2;
   }
 
   .headhesive--stick .logo__circle,
@@ -108,7 +114,8 @@
     position: relative;
 
     max-width: 1366px;
-    height: 687px;
+    /* height: 687px; */
+    height: 757px;
     margin: 0 auto;
     margin-bottom: 110px;
 
@@ -119,7 +126,6 @@
   .head__video-container {
     position: absolute;
     width: 100%;
-    height: 630px;
 
     display: block;
 
@@ -148,6 +154,13 @@
 
     font-size: 64px;
     line-height: 131%;
+  }
+
+  .head__img {
+    position: absolute;
+    left: 50%;
+    z-index: 1;
+    transform: translateX(-50%);
   }
 
   .head__shadow {

@@ -105,6 +105,8 @@ input[type="radio"].visually-hidden {
   position: absolute;
   top: 20px;
   left: 50%;
+  z-index: 1;
+  transform: translateX(-50%);
 
   width: 335px;
   min-height: 29px;
@@ -118,9 +120,6 @@ input[type="radio"].visually-hidden {
 
 /* Header begin */
 .header {
-  z-index: 1;
-  transform: translateX(-50%);
-
   display: flex;
   justify-content: space-between;
   align-items: center;
