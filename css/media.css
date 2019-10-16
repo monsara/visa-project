@@ -1,45 +1,72 @@
-@media (max-width: 1365px) {
+@media (min-width: 376px) {
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+
   .head {
-    background-image: url(../img/banner-bg-img-mobile.jpg);
+    background-image: url(../img/banner-bg-img-desktop.jpg);
+    background-position: top;
   }
 }
 
-@media (min-width: 1366px) {
+@media (min-width: 448px) {
+  .head__text {
+    padding: 0 25px;
+  }
+}
+
+@media (min-width: 680px) {
   .container {
-    width: 1070px;
-    margin: 0 auto;
-    padding: 0 89px;
+    width: 680px;
+    padding: 0 47px;
   }
 
-  /* Page begin */
   .page__header {
-    top: 27px;
-    width: 100%;
-    padding: 0 235px;
-  }
+    top: 0;
 
-  /* Page end */
+    width: 100%;
+    min-height: 82px;
+  }
 
   /* Header begin */
   .header {
+    display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
+  .header__content {
+    position: relative;
+  }
+
+  .header__line {
+    position: absolute;
+    bottom: -21px;
+
+    display: block;
+    width: 100%;
+    height: 1px;
+
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+  /* Header end */
+
+  /* Headhesive begin */
   .headhesive {
     position: fixed;
     top: 0;
     left: 50%;
     transform: translate(-50%, -87px);
 
-    display: flex;
-    min-height: 82px;
-
-    align-items: center;
-
-    background: #ffffff;
+    background: var(--color__white);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 
     transition: 0.5s;
+  }
+
+  .headhesive .header__line {
+    display: none;
   }
 
   .headhesive--stick {
@@ -59,18 +86,7 @@
   .headhesive--stick .hamburger__block {
     background: var(--color__black);
   }
-
-  .header__line {
-    position: absolute;
-    top: 56px;
-
-    display: block;
-    width: 896px;
-    height: 1px;
-
-    background-color: rgba(255, 255, 255, 0.15);
-  }
-  /* Header end */
+  /* Headhesive end */
 
   /* Nav begin */
   .nav {
@@ -91,12 +107,12 @@
     top: 25px;
 
     display: flex;
-    justify-content: center;
-    align-items: center;
     width: 137px;
     height: 33px;
 
-    font-family: Roboto;
+    justify-content: center;
+    align-items: center;
+
     font-style: normal;
     font-weight: 300;
     font-size: 14px;
@@ -107,27 +123,21 @@
     background: var(--color__white);
     border-radius: 24px;
   }
-  /* Nav begin */
+  /* Nav end */
 
   /* Head begin */
   .head {
-    position: relative;
-
     max-width: 1366px;
-    /* height: 687px; */
     height: 757px;
     margin: 0 auto;
     margin-bottom: 110px;
-
-    background-image: url(../img/banner-bg-img-desktop.jpg);
-    background-position: top;
   }
 
   .head__video-container {
     position: absolute;
-    width: 100%;
 
     display: block;
+    width: 100%;
 
     overflow: hidden;
   }
@@ -180,7 +190,7 @@
 
   /* Planning begin */
   .plannig {
-    height: 1350px;
+    height: 1780px;
     margin-bottom: 329px;
 
     background-image: url(../img/planinng-trips-bg-img-desktop.jpg);
@@ -209,12 +219,15 @@
 
   .plannig__list {
     display: flex;
+    width: 586px;
+
     flex-flow: row wrap;
     justify-content: space-between;
   }
 
   .plannig__item {
     width: 276px;
+    margin: 0;
     margin-bottom: 32px;
 
     transition: all 0.2s linear;
@@ -265,7 +278,7 @@
 
   .plannig__item-concierge-service {
     height: 277px;
-    margin-top: 230px;
+    margin-top: -60px;
   }
 
   .plannig__item-concierge-service .plannig__item-title,
@@ -277,21 +290,19 @@
 
   .plannig__item-safe-rental {
     height: 236px;
-    margin-top: -215px;
+  }
+
+  .plannig__item-personal-manager {
+    margin-top: -15px;
   }
 
   .plannig__item-personal-manager,
   .plannig__travel-insurance {
     height: 360px;
-    margin-top: -150px;
   }
 
   .plannig__item-agoda {
     height: 260px;
-  }
-
-  .plannig__travel-insurance {
-    margin-top: -237px;
   }
 
   .plannig__travel-insurance .plannig__item-text {
@@ -317,4 +328,64 @@
     transition: margin-left 0.2s linear;
   }
   /* Planning end */
+}
+
+@media (min-width: 768px) {
+  .header__content {
+    width: 65.6%;
+  }
+}
+
+@media (min-width: 922px) {
+  .head__title {
+    font-size: 35px;
+  }
+
+  .head__text {
+    font-size: 64px;
+    line-height: 131%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1070px;
+    margin: 0 auto;
+    padding: 0 89px;
+  }
+
+  /* Planning begin */
+  .plannig {
+    height: 1350px;
+    margin-bottom: 329px;
+  }
+
+  .plannig__list {
+    width: 100%;
+  }
+
+  .plannig__item-concierge-service {
+    height: 277px;
+    margin-top: 230px;
+  }
+
+  .plannig__item-safe-rental {
+    margin-top: -215px;
+  }
+
+  .plannig__item-personal-manager,
+  .plannig__travel-insurance {
+    margin-top: -150px;
+  }
+
+  .plannig__travel-insurance {
+    margin-top: -237px;
+  }
+  /* Planning end */
+}
+
+@media (min-width: 1366px) {
+  .header__content {
+    width: 896px;
+  }
 }
